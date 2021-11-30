@@ -5,9 +5,9 @@
     "main": "index.js",
     "private": true,
     "scripts": {
-        "build": "webpack",
         "watch": "webpack --watch",
-        "dev": "webpack server --open"
+        "dev": "webpack server --open --config webpack.dev.js",
+        "build": "webpack --config webpack.prod.js"
     },
     "keywords": [],
     "author": "",
@@ -16,7 +16,8 @@
         "html-webpack-plugin": "^5.5.0",
         "webpack": "^5.38.1",
         "webpack-cli": "^4.7.2",
-        "webpack-dev-server": "^4.6.0"
+        "webpack-dev-server": "^4.6.0",
+        "webpack-merge": "^5.8.0"
     },
     "dependencies": {
         "lodash": "^4.17.21"
