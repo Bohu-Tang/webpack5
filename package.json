@@ -5,16 +5,18 @@
     "main": "index.js",
     "private": true,
     "scripts": {
-        "build": "webpack"
+        "build": "webpack",
+        "watch": "webpack --watch",
+        "dev": "webpack server --open"
     },
     "keywords": [],
     "author": "",
     "license": "MIT",
     "devDependencies": {
-        "css-loader": "^6.5.1",
-        "style-loader": "^3.3.1",
+        "html-webpack-plugin": "^5.5.0",
         "webpack": "^5.38.1",
-        "webpack-cli": "^4.7.2"
+        "webpack-cli": "^4.7.2",
+        "webpack-dev-server": "^4.6.0"
     },
     "dependencies": {
         "lodash": "^4.17.21"

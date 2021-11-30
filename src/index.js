@@ -1,20 +1,25 @@
 import _ from 'lodash';
-import './style.css';
-import Icon from './icon.svg';
-
-
 
 function component(){
     const element = document.createElement('div');
-    element.innerHTML = _.join(['你好', '，我是测试webpack的1', '。']);
-    // 为元素添加class
-    element.classList.add('hello');
-    // 把图片添加到元素中
-    const myIcon = new Image();
-    myIcon.src = Icon;
-    element.appendChild(myIcon)
+    element.innerHTML=_.join(['这里是div里面的内容']);
+    
+    const br = document.createElement('br');
+
+    const btn = document.createElement('button');
+    btn.innerHTML = '点击我';
+
+    element.appendChild(br);
+    element.appendChild(btn)
+
+    btn.onclick = e=>import(/* webpackChunkName: "print" */ './print').then(module => {
+        const print = module.default;
+        print()
+    })
 
     return element;
+
+    
 }
 
 document.body.appendChild(component())
