@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "webpack-dev-server  --hot  --config build/webpack.dev.js",
+    "dev": "webpack-dev-server  --hot  --config build/webpack.dev.js",
     "build": "webpack  --config  build/webpack.prod.js",
     "distanalyzer": "webpack --env.analyzer=true --config build/webpack.prod.js"
   },
   "author": "bill mark",
   "license": "ISC",
   "dependencies": {
+    "element-plus": "^1.2.0-beta.5",
     "vue": "^3.2.23",
     "vue-router": "^4.0.12"
   },
@@ -28,6 +29,8 @@
     "mini-css-extract-plugin": "^2.4.5",
     "node-sass": "^6.0.1",
     "style-loader": "^3.3.1",
+    "unplugin-auto-import": "^0.5.1",
+    "unplugin-vue-components": "^0.17.2",
     "vue-loader": "^16.8.3",
     "webpack": "^5.64.3",
     "webpack-bundle-analyzer": "^4.5.0",
